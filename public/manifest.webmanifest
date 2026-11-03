@@ -1,0 +1,15 @@
+{
+  "name": "우리의 다이어리",
+  "short_name": "다이어리",
+  "description": "둘이 한 권을 나눠 쓰는 다이어리",
+  "start_url": "/diary/bucket",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#f6f9fc",
+  "theme_color": "#f6f9fc",
+  "lang": "ko",
+  "icons": [
+    { "src": "/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" },
+    { "src": "/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "maskable" }
+  ]
+}

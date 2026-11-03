@@ -1,0 +1,1410 @@
+{
+  "site": "timelupin",
+  "url": "https://timelupin.com/fortune/saju",
+  "timeCorrection": "도시 기본값 \"서울\" → 지역시 보정 -32분만 적용(헤더 \"✦ … 지역시 (-32분)\"). 서머타임(1948~60, 1987~88) 자동 보정 없음: DST 기간 케이스(c02,c03,c21 등)도 -32분만 적용됨. 야자시/조자시 옵션 기본 OFF(23:00~ 자시는 당일 일주 + 당일 일간 기준 시주). 절기 경계는 시각이 아니라 날짜 단위로 판정하는 것으로 보임(c06,c08,c13,c15,c19,c24에서 fateup/forceteller와 월주 불일치). c23은 -32분 보정 결과(02:28)가 1987 DST 갭에 걸려 브라우저 Date가 03:28로 표시(시주는 축시로 계산됨).",
+  "hourInput": "시:분 직접 입력(URL 파라미터 hour/minute)",
+  "fetchedAt": "2026-09-22T06:44:02.074Z",
+  "results": [
+    {
+      "id": "c01",
+      "ok": true,
+      "pillars": {
+        "year": "경오",
+        "month": "무인",
+        "day": "기사",
+        "hour": "경오"
+      },
+      "pillarsHanja": {
+        "year": "庚午",
+        "month": "戊寅",
+        "day": "己巳",
+        "hour": "庚午"
+      },
+      "daeunStartAge": 10,
+      "daeunStartAgeNote": "기묘",
+      "daeun": [
+        "기묘",
+        "경진",
+        "신사",
+        "임오",
+        "계미",
+        "갑신",
+        "을유",
+        "병술",
+        "정해",
+        "무자"
+      ],
+      "daeunHanja": [
+        "己卯",
+        "庚辰",
+        "辛巳",
+        "壬午",
+        "癸未",
+        "甲申",
+        "乙酉",
+        "丙戌",
+        "丁亥",
+        "戊子"
+      ],
+      "daeunAges": [
+        10,
+        20,
+        30,
+        40,
+        50,
+        60,
+        70,
+        80,
+        90,
+        100
+      ],
+      "raw": "양 1990/03/05 12:00 남자 서울 | 음 1990/02/09 서울 | ✦ 1990/03/05 11:28 지역시 (-32분) | 양·금 || 대운수 : 10(기묘)  좌우 슬라이드에서 더 볼 수 있어요.  10세 ",
+      "url": "https://timelupin.com/fortune/saju/result?name=t&gender=M&year=1990&month=3&day=5&hour=12&minute=0&calendar=solar&isLeap=false&city=%EC%84%9C%EC%9A%B8&yaJasi=false"
+    },
+    {
+      "id": "c02",
+      "ok": true,
+      "pillars": {
+        "year": "정묘",
+        "month": "병오",
+        "day": "을미",
+        "hour": "계미"
+      },
+      "pillarsHanja": {
+        "year": "丁卯",
+        "month": "丙午",
+        "day": "乙未",
+        "hour": "癸未"
+      },
+      "daeunStartAge": 7,
+      "daeunStartAgeNote": "기묘",
+      "daeun": [
+        "정미",
+        "무신",
+        "기유",
+        "경술",
+        "신해",
+        "임자",
+        "계축",
+        "갑인",
+        "을묘",
+        "병진"
+      ],
+      "daeunHanja": [
+        "丁未",
+        "戊申",
+        "己酉",
+        "庚戌",
+        "辛亥",
+        "壬子",
+        "癸丑",
+        "甲寅",
+        "乙卯",
+        "丙辰"
+      ],
+      "daeunAges": [
+        7,
+        17,
+        27,
+        37,
+        47,
+        57,
+        67,
+        77,
+        87,
+        97
+      ],
+      "raw": "양 1987/06/15 14:00 여자 서울 | 음 1987/05/19 서울 | ✦ 1987/06/15 13:28 지역시 (-32분) | 음·수 || 대운수 : 7(기묘)  좌우 슬라이드에서 더 볼 수 있어요.  7세 식신",
+      "url": "https://timelupin.com/fortune/saju/result?name=t&gender=F&year=1987&month=6&day=15&hour=14&minute=0&calendar=solar&isLeap=false&city=%EC%84%9C%EC%9A%B8&yaJasi=false"
+    },
+    {
+      "id": "c03",
+      "ok": true,
+      "pillars": {
+        "year": "무진",
+        "month": "기미",
+        "day": "병자",
+        "hour": "기해"
+      },
+      "pillarsHanja": {
+        "year": "戊辰",
+        "month": "己未",
+        "day": "丙子",
+        "hour": "己亥"
+      },
+      "daeunStartAge": 6,
+      "daeunStartAgeNote": "기묘",
+      "daeun": [
+        "경신",
+        "신유",
+        "임술",
+        "계해",
+        "갑자",
+        "을축",
+        "병인",
+        "정묘",
+        "무진",
+        "기사"
+      ],
+      "daeunHanja": [
+        "庚申",
+        "辛酉",
+        "壬戌",
+        "癸亥",
+        "甲子",
+        "乙丑",
+        "丙寅",
+        "丁卯",
+        "戊辰",
+        "己巳"
+      ],
+      "daeunAges": [
+        6,
+        16,
+        26,
+        36,
+        46,
+        56,
+        66,
+        76,
+        86,
+        96
+      ],
+      "raw": "양 1988/07/20 23:30 남자 서울 | 음 1988/06/07 서울 | ✦ 1988/07/20 22:58 지역시 (-32분) | 음·토 || 대운수 : 6(기묘)  좌우 슬라이드에서 더 볼 수 있어요.  6세 편재",
+      "url": "https://timelupin.com/fortune/saju/result?name=t&gender=M&year=1988&month=7&day=20&hour=23&minute=30&calendar=solar&isLeap=false&city=%EC%84%9C%EC%9A%B8&yaJasi=false"
+    },
+    {
+      "id": "c04",
+      "ok": true,
+      "pillars": {
+        "year": "을미",
+        "month": "갑신",
+        "day": "계묘",
+        "hour": "임자"
+      },
+      "pillarsHanja": {
+        "year": "乙未",
+        "month": "甲申",
+        "day": "癸卯",
+        "hour": "壬子"
+      },
+      "daeunStartAge": 10,
+      "daeunStartAgeNote": "기묘",
+      "daeun": [
+        "을유",
+        "병술",
+        "정해",
+        "무자",
+        "기축",
+        "경인",
+        "신묘",
+        "임진",
+        "계사",
+        "갑오"
+      ],
+      "daeunHanja": [
+        "乙酉",
+        "丙戌",
+        "丁亥",
+        "戊子",
+        "己丑",
+        "庚寅",
+        "辛卯",
+        "壬辰",
+        "癸巳",
+        "甲午"
+      ],
+      "daeunAges": [
+        10,
+        20,
+        30,
+        40,
+        50,
+        60,
+        70,
+        80,
+        90,
+        100
+      ],
+      "raw": "양 1955/08/10 01:15 여자 서울 | 음 1955/06/23 서울 | ✦ 1955/08/10 00:43 지역시 (-32분) | 양·수 || 대운수 : 10(기묘)  좌우 슬라이드에서 더 볼 수 있어요.  10세 ",
+      "url": "https://timelupin.com/fortune/saju/result?name=t&gender=F&year=1955&month=8&day=10&hour=1&minute=15&calendar=solar&isLeap=false&city=%EC%84%9C%EC%9A%B8&yaJasi=false"
+    },
+    {
+      "id": "c05",
+      "ok": true,
+      "pillars": {
+        "year": "기묘",
+        "month": "병자",
+        "day": "정사",
+        "hour": "경자"
+      },
+      "pillarsHanja": {
+        "year": "己卯",
+        "month": "丙子",
+        "day": "丁巳",
+        "hour": "庚子"
+      },
+      "daeunStartAge": 0,
+      "daeunStartAgeNote": "기묘",
+      "daeun": [
+        "을해",
+        "갑술",
+        "계유",
+        "임신",
+        "신미",
+        "경오",
+        "기사",
+        "무진",
+        "정묘",
+        "병인"
+      ],
+      "daeunHanja": [
+        "乙亥",
+        "甲戌",
+        "癸酉",
+        "壬申",
+        "辛未",
+        "庚午",
+        "己巳",
+        "戊辰",
+        "丁卯",
+        "丙寅"
+      ],
+      "daeunAges": [
+        0,
+        10,
+        20,
+        30,
+        40,
+        50,
+        60,
+        70,
+        80,
+        90
+      ],
+      "raw": "양 2000/01/01 00:10 남자 서울 | 음 1999/11/25 서울 | ✦ 2000/01/01 23:38 지역시 (-32분) | 양·금 || 대운수 : 0(기묘)  좌우 슬라이드에서 더 볼 수 있어요.  0세 편인",
+      "url": "https://timelupin.com/fortune/saju/result?name=t&gender=M&year=2000&month=1&day=1&hour=0&minute=10&calendar=solar&isLeap=false&city=%EC%84%9C%EC%9A%B8&yaJasi=false"
+    },
+    {
+      "id": "c06",
+      "ok": true,
+      "pillars": {
+        "year": "경진",
+        "month": "무인",
+        "day": "임진",
+        "hour": "경술"
+      },
+      "pillarsHanja": {
+        "year": "庚辰",
+        "month": "戊寅",
+        "day": "壬辰",
+        "hour": "庚戌"
+      },
+      "daeunStartAge": 0,
+      "daeunStartAgeNote": "기묘",
+      "daeun": [
+        "정축",
+        "병자",
+        "을해",
+        "갑술",
+        "계유",
+        "임신",
+        "신미",
+        "경오",
+        "기사",
+        "무진"
+      ],
+      "daeunHanja": [
+        "丁丑",
+        "丙子",
+        "乙亥",
+        "甲戌",
+        "癸酉",
+        "壬申",
+        "辛未",
+        "庚午",
+        "己巳",
+        "戊辰"
+      ],
+      "daeunAges": [
+        0,
+        10,
+        20,
+        30,
+        40,
+        50,
+        60,
+        70,
+        80,
+        90
+      ],
+      "raw": "양 2000/02/04 20:00 여자 서울 | 음 1999/12/29 서울 | ✦ 2000/02/04 19:28 지역시 (-32분) | 양·금 || 대운수 : 0(기묘)  좌우 슬라이드에서 더 볼 수 있어요.  0세 정재",
+      "url": "https://timelupin.com/fortune/saju/result?name=t&gender=F&year=2000&month=2&day=4&hour=20&minute=0&calendar=solar&isLeap=false&city=%EC%84%9C%EC%9A%B8&yaJasi=false"
+    },
+    {
+      "id": "c07",
+      "ok": true,
+      "pillars": {
+        "year": "경진",
+        "month": "무인",
+        "day": "임진",
+        "hour": "신해"
+      },
+      "pillarsHanja": {
+        "year": "庚辰",
+        "month": "戊寅",
+        "day": "壬辰",
+        "hour": "辛亥"
+      },
+      "daeunStartAge": 10,
+      "daeunStartAgeNote": "기묘",
+      "daeun": [
+        "기묘",
+        "경진",
+        "신사",
+        "임오",
+        "계미",
+        "갑신",
+        "을유",
+        "병술",
+        "정해",
+        "무자"
+      ],
+      "daeunHanja": [
+        "己卯",
+        "庚辰",
+        "辛巳",
+        "壬午",
+        "癸未",
+        "甲申",
+        "乙酉",
+        "丙戌",
+        "丁亥",
+        "戊子"
+      ],
+      "daeunAges": [
+        10,
+        20,
+        30,
+        40,
+        50,
+        60,
+        70,
+        80,
+        90,
+        100
+      ],
+      "raw": "양 2000/02/04 22:30 남자 서울 | 음 1999/12/29 서울 | ✦ 2000/02/04 21:58 지역시 (-32분) | 음·금 || 대운수 : 10(기묘)  좌우 슬라이드에서 더 볼 수 있어요.  10세 ",
+      "url": "https://timelupin.com/fortune/saju/result?name=t&gender=M&year=2000&month=2&day=4&hour=22&minute=30&calendar=solar&isLeap=false&city=%EC%84%9C%EC%9A%B8&yaJasi=false"
+    },
+    {
+      "id": "c08",
+      "ok": true,
+      "pillars": {
+        "year": "을축",
+        "month": "정해",
+        "day": "경술",
+        "hour": "기묘"
+      },
+      "pillarsHanja": {
+        "year": "乙丑",
+        "month": "丁亥",
+        "day": "庚戌",
+        "hour": "己卯"
+      },
+      "daeunStartAge": 10,
+      "daeunStartAgeNote": "기묘",
+      "daeun": [
+        "무자",
+        "기축",
+        "경인",
+        "신묘",
+        "임진",
+        "계사",
+        "갑오",
+        "을미",
+        "병신",
+        "정유"
+      ],
+      "daeunHanja": [
+        "戊子",
+        "己丑",
+        "庚寅",
+        "辛卯",
+        "壬辰",
+        "癸巳",
+        "甲午",
+        "乙未",
+        "丙申",
+        "丁酉"
+      ],
+      "daeunAges": [
+        10,
+        20,
+        30,
+        40,
+        50,
+        60,
+        70,
+        80,
+        90,
+        100
+      ],
+      "raw": "양 1985/11/07 06:00 여자 서울 | 음 1985/09/25 서울 | ✦ 1985/11/07 05:28 지역시 (-32분) | 음·토 || 대운수 : 10(기묘)  좌우 슬라이드에서 더 볼 수 있어요.  10세 ",
+      "url": "https://timelupin.com/fortune/saju/result?name=t&gender=F&year=1985&month=11&day=7&hour=6&minute=0&calendar=solar&isLeap=false&city=%EC%84%9C%EC%9A%B8&yaJasi=false"
+    },
+    {
+      "id": "c09",
+      "ok": true,
+      "pillars": {
+        "year": "을묘",
+        "month": "무자",
+        "day": "임인",
+        "hour": "을사"
+      },
+      "pillarsHanja": {
+        "year": "乙卯",
+        "month": "戊子",
+        "day": "壬寅",
+        "hour": "乙巳"
+      },
+      "daeunStartAge": 5,
+      "daeunStartAgeNote": "기묘",
+      "daeun": [
+        "정해",
+        "병술",
+        "을유",
+        "갑신",
+        "계미",
+        "임오",
+        "신사",
+        "경진",
+        "기묘",
+        "무인"
+      ],
+      "daeunHanja": [
+        "丁亥",
+        "丙戌",
+        "乙酉",
+        "甲申",
+        "癸未",
+        "壬午",
+        "辛巳",
+        "庚辰",
+        "己卯",
+        "戊寅"
+      ],
+      "daeunAges": [
+        5,
+        15,
+        25,
+        35,
+        45,
+        55,
+        65,
+        75,
+        85,
+        95
+      ],
+      "raw": "양 1975/12/22 10:00 남자 서울 | 음 1975/11/20 서울 | ✦ 1975/12/22 09:28 지역시 (-32분) | 음·목 || 대운수 : 5(기묘)  좌우 슬라이드에서 더 볼 수 있어요.  5세 정재",
+      "url": "https://timelupin.com/fortune/saju/result?name=t&gender=M&year=1975&month=12&day=22&hour=10&minute=0&calendar=solar&isLeap=false&city=%EC%84%9C%EC%9A%B8&yaJasi=false"
+    },
+    {
+      "id": "c10",
+      "ok": true,
+      "pillars": {
+        "year": "을사",
+        "month": "신사",
+        "day": "기미",
+        "hour": "갑자"
+      },
+      "pillarsHanja": {
+        "year": "乙巳",
+        "month": "辛巳",
+        "day": "己未",
+        "hour": "甲子"
+      },
+      "daeunStartAge": 11,
+      "daeunStartAgeNote": "기묘",
+      "daeun": [
+        "임오",
+        "계미",
+        "갑신",
+        "을유",
+        "병술",
+        "정해",
+        "무자",
+        "기축",
+        "경인",
+        "신묘"
+      ],
+      "daeunHanja": [
+        "壬午",
+        "癸未",
+        "甲申",
+        "乙酉",
+        "丙戌",
+        "丁亥",
+        "戊子",
+        "己丑",
+        "庚寅",
+        "辛卯"
+      ],
+      "daeunAges": [
+        11,
+        21,
+        31,
+        41,
+        51,
+        61,
+        71,
+        81,
+        91,
+        101
+      ],
+      "raw": "양 1965/05/05 23:50 여자 서울 | 음 1965/04/05 서울 | ✦ 1965/05/05 23:18 지역시 (-32분) | 양·목 || 대운수 : 11(기묘)  좌우 슬라이드에서 더 볼 수 있어요.  11세 ",
+      "url": "https://timelupin.com/fortune/saju/result?name=t&gender=F&year=1965&month=5&day=5&hour=23&minute=50&calendar=solar&isLeap=false&city=%EC%84%9C%EC%9A%B8&yaJasi=false"
+    },
+    {
+      "id": "c11",
+      "ok": true,
+      "pillars": {
+        "year": "계유",
+        "month": "신유",
+        "day": "임진",
+        "hour": "신축"
+      },
+      "pillarsHanja": {
+        "year": "癸酉",
+        "month": "辛酉",
+        "day": "壬辰",
+        "hour": "辛丑"
+      },
+      "daeunStartAge": 0,
+      "daeunStartAgeNote": "기묘",
+      "daeun": [
+        "경신",
+        "기미",
+        "무오",
+        "정사",
+        "병진",
+        "을묘",
+        "갑인",
+        "계축",
+        "임자",
+        "신해"
+      ],
+      "daeunHanja": [
+        "庚申",
+        "己未",
+        "戊午",
+        "丁巳",
+        "丙辰",
+        "乙卯",
+        "甲寅",
+        "癸丑",
+        "壬子",
+        "辛亥"
+      ],
+      "daeunAges": [
+        0,
+        10,
+        20,
+        30,
+        40,
+        50,
+        60,
+        70,
+        80,
+        90
+      ],
+      "raw": "양 1993/09/08 03:00 남자 서울 | 음 1993/07/22 서울 | ✦ 1993/09/08 02:28 지역시 (-32분) | 음·금 || 대운수 : 0(기묘)  좌우 슬라이드에서 더 볼 수 있어요.  0세 편인",
+      "url": "https://timelupin.com/fortune/saju/result?name=t&gender=M&year=1993&month=9&day=8&hour=3&minute=0&calendar=solar&isLeap=false&city=%EC%84%9C%EC%9A%B8&yaJasi=false"
+    },
+    {
+      "id": "c12",
+      "ok": true,
+      "pillars": {
+        "year": "경인",
+        "month": "갑신",
+        "day": "경인",
+        "hour": "경진"
+      },
+      "pillarsHanja": {
+        "year": "庚寅",
+        "month": "甲申",
+        "day": "庚寅",
+        "hour": "庚辰"
+      },
+      "daeunStartAge": 0,
+      "daeunStartAgeNote": "기묘",
+      "daeun": [
+        "계미",
+        "임오",
+        "신사",
+        "경진",
+        "기묘",
+        "무인",
+        "정축",
+        "병자",
+        "을해",
+        "갑술"
+      ],
+      "daeunHanja": [
+        "癸未",
+        "壬午",
+        "辛巳",
+        "庚辰",
+        "己卯",
+        "戊寅",
+        "丁丑",
+        "丙子",
+        "乙亥",
+        "甲戌"
+      ],
+      "daeunAges": [
+        0,
+        10,
+        20,
+        30,
+        40,
+        50,
+        60,
+        70,
+        80,
+        90
+      ],
+      "raw": "양 2010/08/08 09:30 여자 서울 | 음 2010/06/28 서울 | ✦ 2010/08/08 08:58 지역시 (-32분) | 양·금 || 대운수 : 0(기묘)  좌우 슬라이드에서 더 볼 수 있어요.  0세 상관",
+      "url": "https://timelupin.com/fortune/saju/result?name=t&gender=F&year=2010&month=8&day=8&hour=9&minute=30&calendar=solar&isLeap=false&city=%EC%84%9C%EC%9A%B8&yaJasi=false"
+    },
+    {
+      "id": "c13",
+      "ok": true,
+      "pillars": {
+        "year": "무오",
+        "month": "계축",
+        "day": "계유",
+        "hour": "무오"
+      },
+      "pillarsHanja": {
+        "year": "戊午",
+        "month": "癸丑",
+        "day": "癸酉",
+        "hour": "戊午"
+      },
+      "daeunStartAge": 10,
+      "daeunStartAgeNote": "기묘",
+      "daeun": [
+        "갑인",
+        "을묘",
+        "병진",
+        "정사",
+        "무오",
+        "기미",
+        "경신",
+        "신유",
+        "임술",
+        "계해"
+      ],
+      "daeunHanja": [
+        "甲寅",
+        "乙卯",
+        "丙辰",
+        "丁巳",
+        "戊午",
+        "己未",
+        "庚申",
+        "辛酉",
+        "壬戌",
+        "癸亥"
+      ],
+      "daeunAges": [
+        10,
+        20,
+        30,
+        40,
+        50,
+        60,
+        70,
+        80,
+        90,
+        100
+      ],
+      "raw": "양 1979/01/06 12:00 남자 서울 | 음 1978/12/08 서울 | ✦ 1979/01/06 11:28 지역시 (-32분) | 양·토 || 대운수 : 10(기묘)  좌우 슬라이드에서 더 볼 수 있어요.  10세 ",
+      "url": "https://timelupin.com/fortune/saju/result?name=t&gender=M&year=1979&month=1&day=6&hour=12&minute=0&calendar=solar&isLeap=false&city=%EC%84%9C%EC%9A%B8&yaJasi=false"
+    },
+    {
+      "id": "c14",
+      "ok": true,
+      "pillars": {
+        "year": "경자",
+        "month": "무자",
+        "day": "계사",
+        "hour": "임자"
+      },
+      "pillarsHanja": {
+        "year": "庚子",
+        "month": "戊子",
+        "day": "癸巳",
+        "hour": "壬子"
+      },
+      "daeunStartAge": 0,
+      "daeunStartAgeNote": "기묘",
+      "daeun": [
+        "정해",
+        "병술",
+        "을유",
+        "갑신",
+        "계미",
+        "임오",
+        "신사",
+        "경진",
+        "기묘",
+        "무인"
+      ],
+      "daeunHanja": [
+        "丁亥",
+        "丙戌",
+        "乙酉",
+        "甲申",
+        "癸未",
+        "壬午",
+        "辛巳",
+        "庚辰",
+        "己卯",
+        "戊寅"
+      ],
+      "daeunAges": [
+        0,
+        10,
+        20,
+        30,
+        40,
+        50,
+        60,
+        70,
+        80,
+        90
+      ],
+      "raw": "양 1961/01/01 00:30 여자 서울 | 음 1960/11/15 서울 | ✦ 1961/01/01 23:58 지역시 (-32분) | 양·수 || 대운수 : 0(기묘)  좌우 슬라이드에서 더 볼 수 있어요.  0세 편재",
+      "url": "https://timelupin.com/fortune/saju/result?name=t&gender=F&year=1961&month=1&day=1&hour=0&minute=30&calendar=solar&isLeap=false&city=%EC%84%9C%EC%9A%B8&yaJasi=false"
+    },
+    {
+      "id": "c15",
+      "ok": true,
+      "pillars": {
+        "year": "병자",
+        "month": "임진",
+        "day": "신미",
+        "hour": "정유"
+      },
+      "pillarsHanja": {
+        "year": "丙子",
+        "month": "壬辰",
+        "day": "辛未",
+        "hour": "丁酉"
+      },
+      "daeunStartAge": 10,
+      "daeunStartAgeNote": "기묘",
+      "daeun": [
+        "계사",
+        "갑오",
+        "을미",
+        "병신",
+        "정유",
+        "무술",
+        "기해",
+        "경자",
+        "신축",
+        "임인"
+      ],
+      "daeunHanja": [
+        "癸巳",
+        "甲午",
+        "乙未",
+        "丙申",
+        "丁酉",
+        "戊戌",
+        "己亥",
+        "庚子",
+        "辛丑",
+        "壬寅"
+      ],
+      "daeunAges": [
+        10,
+        20,
+        30,
+        40,
+        50,
+        60,
+        70,
+        80,
+        90,
+        100
+      ],
+      "raw": "양 1996/04/04 18:00 남자 서울 | 음 1996/02/17 서울 | ✦ 1996/04/04 17:28 지역시 (-32분) | 음·화 || 대운수 : 10(기묘)  좌우 슬라이드에서 더 볼 수 있어요.  10세 ",
+      "url": "https://timelupin.com/fortune/saju/result?name=t&gender=M&year=1996&month=4&day=4&hour=18&minute=0&calendar=solar&isLeap=false&city=%EC%84%9C%EC%9A%B8&yaJasi=false"
+    },
+    {
+      "id": "c16",
+      "ok": true,
+      "pillars": {
+        "year": "계미",
+        "month": "임술",
+        "day": "갑인",
+        "hour": "갑자"
+      },
+      "pillarsHanja": {
+        "year": "癸未",
+        "month": "壬戌",
+        "day": "甲寅",
+        "hour": "甲子"
+      },
+      "daeunStartAge": 10,
+      "daeunStartAgeNote": "기묘",
+      "daeun": [
+        "계해",
+        "갑자",
+        "을축",
+        "병인",
+        "정묘",
+        "무진",
+        "기사",
+        "경오",
+        "신미",
+        "임신"
+      ],
+      "daeunHanja": [
+        "癸亥",
+        "甲子",
+        "乙丑",
+        "丙寅",
+        "丁卯",
+        "戊辰",
+        "己巳",
+        "庚午",
+        "辛未",
+        "壬申"
+      ],
+      "daeunAges": [
+        10,
+        20,
+        30,
+        40,
+        50,
+        60,
+        70,
+        80,
+        90,
+        100
+      ],
+      "raw": "양 2003/10/09 00:30 여자 서울 | 음 2003/09/14 서울 | ✦ 2003/10/09 23:58 지역시 (-32분) | 양·목 || 대운수 : 10(기묘)  좌우 슬라이드에서 더 볼 수 있어요.  10세 ",
+      "url": "https://timelupin.com/fortune/saju/result?name=t&gender=F&year=2003&month=10&day=9&hour=0&minute=30&calendar=solar&isLeap=false&city=%EC%84%9C%EC%9A%B8&yaJasi=false"
+    },
+    {
+      "id": "c17",
+      "ok": true,
+      "pillars": {
+        "year": "임술",
+        "month": "임인",
+        "day": "무진",
+        "hour": "기미"
+      },
+      "pillarsHanja": {
+        "year": "壬戌",
+        "month": "壬寅",
+        "day": "戊辰",
+        "hour": "己未"
+      },
+      "daeunStartAge": 7,
+      "daeunStartAgeNote": "기묘",
+      "daeun": [
+        "계묘",
+        "갑진",
+        "을사",
+        "병오",
+        "정미",
+        "무신",
+        "기유",
+        "경술",
+        "신해",
+        "임자"
+      ],
+      "daeunHanja": [
+        "癸卯",
+        "甲辰",
+        "乙巳",
+        "丙午",
+        "丁未",
+        "戊申",
+        "己酉",
+        "庚戌",
+        "辛亥",
+        "壬子"
+      ],
+      "daeunAges": [
+        7,
+        17,
+        27,
+        37,
+        47,
+        57,
+        67,
+        77,
+        87,
+        97
+      ],
+      "raw": "양 1982/02/14 15:00 남자 서울 | 음 1982/01/21 서울 | ✦ 1982/02/14 14:28 지역시 (-32분) | 음·토 || 대운수 : 7(기묘)  좌우 슬라이드에서 더 볼 수 있어요.  7세 정재",
+      "url": "https://timelupin.com/fortune/saju/result?name=t&gender=M&year=1982&month=2&day=14&hour=15&minute=0&calendar=solar&isLeap=false&city=%EC%84%9C%EC%9A%B8&yaJasi=false"
+    },
+    {
+      "id": "c18",
+      "ok": true,
+      "pillars": {
+        "year": "기묘",
+        "month": "병자",
+        "day": "정사",
+        "hour": "경자"
+      },
+      "pillarsHanja": {
+        "year": "己卯",
+        "month": "丙子",
+        "day": "丁巳",
+        "hour": "庚子"
+      },
+      "daeunStartAge": 2,
+      "daeunStartAgeNote": "기묘",
+      "daeun": [
+        "정축",
+        "무인",
+        "기묘",
+        "경진",
+        "신사",
+        "임오",
+        "계미",
+        "갑신",
+        "을유",
+        "병술"
+      ],
+      "daeunHanja": [
+        "丁丑",
+        "戊寅",
+        "己卯",
+        "庚辰",
+        "辛巳",
+        "壬午",
+        "癸未",
+        "甲申",
+        "乙酉",
+        "丙戌"
+      ],
+      "daeunAges": [
+        2,
+        12,
+        22,
+        32,
+        42,
+        52,
+        62,
+        72,
+        82,
+        92
+      ],
+      "raw": "양 1999/12/31 23:59 여자 서울 | 음 1999/11/24 서울 | ✦ 1999/12/31 23:27 지역시 (-32분) | 양·금 || 대운수 : 2(기묘)  좌우 슬라이드에서 더 볼 수 있어요.  2세 비견",
+      "url": "https://timelupin.com/fortune/saju/result?name=t&gender=F&year=1999&month=12&day=31&hour=23&minute=59&calendar=solar&isLeap=false&city=%EC%84%9C%EC%9A%B8&yaJasi=false"
+    },
+    {
+      "id": "c19",
+      "ok": true,
+      "pillars": {
+        "year": "경술",
+        "month": "임오",
+        "day": "정사",
+        "hour": "임인"
+      },
+      "pillarsHanja": {
+        "year": "庚戌",
+        "month": "壬午",
+        "day": "丁巳",
+        "hour": "壬寅"
+      },
+      "daeunStartAge": 10,
+      "daeunStartAgeNote": "기묘",
+      "daeun": [
+        "계미",
+        "갑신",
+        "을유",
+        "병술",
+        "정해",
+        "무자",
+        "기축",
+        "경인",
+        "신묘",
+        "임진"
+      ],
+      "daeunHanja": [
+        "癸未",
+        "甲申",
+        "乙酉",
+        "丙戌",
+        "丁亥",
+        "戊子",
+        "己丑",
+        "庚寅",
+        "辛卯",
+        "壬辰"
+      ],
+      "daeunAges": [
+        10,
+        20,
+        30,
+        40,
+        50,
+        60,
+        70,
+        80,
+        90,
+        100
+      ],
+      "raw": "양 1970/06/06 05:00 남자 서울 | 음 1970/05/03 서울 | ✦ 1970/06/06 04:28 지역시 (-32분) | 양·수 || 대운수 : 10(기묘)  좌우 슬라이드에서 더 볼 수 있어요.  10세 ",
+      "url": "https://timelupin.com/fortune/saju/result?name=t&gender=M&year=1970&month=6&day=6&hour=5&minute=0&calendar=solar&isLeap=false&city=%EC%84%9C%EC%9A%B8&yaJasi=false"
+    },
+    {
+      "id": "c20",
+      "ok": true,
+      "pillars": {
+        "year": "을미",
+        "month": "기묘",
+        "day": "병신",
+        "hour": "갑오"
+      },
+      "pillarsHanja": {
+        "year": "乙未",
+        "month": "己卯",
+        "day": "丙申",
+        "hour": "甲午"
+      },
+      "daeunStartAge": 5,
+      "daeunStartAgeNote": "기묘",
+      "daeun": [
+        "경진",
+        "신사",
+        "임오",
+        "계미",
+        "갑신",
+        "을유",
+        "병술",
+        "정해",
+        "무자",
+        "기축"
+      ],
+      "daeunHanja": [
+        "庚辰",
+        "辛巳",
+        "壬午",
+        "癸未",
+        "甲申",
+        "乙酉",
+        "丙戌",
+        "丁亥",
+        "戊子",
+        "己丑"
+      ],
+      "daeunAges": [
+        5,
+        15,
+        25,
+        35,
+        45,
+        55,
+        65,
+        75,
+        85,
+        95
+      ],
+      "raw": "양 2015/03/21 12:00 여자 서울 | 음 2015/02/02 서울 | ✦ 2015/03/21 11:28 지역시 (-32분) | 양·목 || 대운수 : 5(기묘)  좌우 슬라이드에서 더 볼 수 있어요.  5세 편재",
+      "url": "https://timelupin.com/fortune/saju/result?name=t&gender=F&year=2015&month=3&day=21&hour=12&minute=0&calendar=solar&isLeap=false&city=%EC%84%9C%EC%9A%B8&yaJasi=false"
+    },
+    {
+      "id": "c21",
+      "ok": true,
+      "pillars": {
+        "year": "무자",
+        "month": "정사",
+        "day": "정사",
+        "hour": "병오"
+      },
+      "pillarsHanja": {
+        "year": "戊子",
+        "month": "丁巳",
+        "day": "丁巳",
+        "hour": "丙午"
+      },
+      "daeunStartAge": 12,
+      "daeunStartAgeNote": "기묘",
+      "daeun": [
+        "무오",
+        "기미",
+        "경신",
+        "신유",
+        "임술",
+        "계해",
+        "갑자",
+        "을축",
+        "병인",
+        "정묘"
+      ],
+      "daeunHanja": [
+        "戊午",
+        "己未",
+        "庚申",
+        "辛酉",
+        "壬戌",
+        "癸亥",
+        "甲子",
+        "乙丑",
+        "丙寅",
+        "丁卯"
+      ],
+      "daeunAges": [
+        12,
+        22,
+        32,
+        42,
+        52,
+        62,
+        72,
+        82,
+        92,
+        102
+      ],
+      "raw": "양 1948/06/01 12:00 남자 서울 | 음 1948/04/24 서울 | ✦ 1948/06/01 11:28 지역시 (-32분) | 양·화 || 대운수 : 12(기묘)  좌우 슬라이드에서 더 볼 수 있어요.  12세 ",
+      "url": "https://timelupin.com/fortune/saju/result?name=t&gender=M&year=1948&month=6&day=1&hour=12&minute=0&calendar=solar&isLeap=false&city=%EC%84%9C%EC%9A%B8&yaJasi=false"
+    },
+    {
+      "id": "c22",
+      "ok": true,
+      "pillars": {
+        "year": "무술",
+        "month": "기미",
+        "day": "계사",
+        "hour": "계해"
+      },
+      "pillarsHanja": {
+        "year": "戊戌",
+        "month": "己未",
+        "day": "癸巳",
+        "hour": "癸亥"
+      },
+      "daeunStartAge": 3,
+      "daeunStartAgeNote": "기묘",
+      "daeun": [
+        "무오",
+        "정사",
+        "병진",
+        "을묘",
+        "갑인",
+        "계축",
+        "임자",
+        "신해",
+        "경술",
+        "기유"
+      ],
+      "daeunHanja": [
+        "戊午",
+        "丁巳",
+        "丙辰",
+        "乙卯",
+        "甲寅",
+        "癸丑",
+        "壬子",
+        "辛亥",
+        "庚戌",
+        "己酉"
+      ],
+      "daeunAges": [
+        3,
+        13,
+        23,
+        33,
+        43,
+        53,
+        63,
+        73,
+        83,
+        93
+      ],
+      "raw": "양 1958/07/15 22:45 여자 서울 | 음 1958/05/29 서울 | ✦ 1958/07/15 22:13 지역시 (-32분) | 음·수 || 대운수 : 3(기묘)  좌우 슬라이드에서 더 볼 수 있어요.  3세 정관",
+      "url": "https://timelupin.com/fortune/saju/result?name=t&gender=F&year=1958&month=7&day=15&hour=22&minute=45&calendar=solar&isLeap=false&city=%EC%84%9C%EC%9A%B8&yaJasi=false"
+    },
+    {
+      "id": "c23",
+      "ok": true,
+      "pillars": {
+        "year": "정묘",
+        "month": "을사",
+        "day": "기미",
+        "hour": "을축"
+      },
+      "pillarsHanja": {
+        "year": "丁卯",
+        "month": "乙巳",
+        "day": "己未",
+        "hour": "乙丑"
+      },
+      "daeunStartAge": 2,
+      "daeunStartAgeNote": "기묘",
+      "daeun": [
+        "갑진",
+        "계묘",
+        "임인",
+        "신축",
+        "경자",
+        "기해",
+        "무술",
+        "정유",
+        "병신",
+        "을미"
+      ],
+      "daeunHanja": [
+        "甲辰",
+        "癸卯",
+        "壬寅",
+        "辛丑",
+        "庚子",
+        "己亥",
+        "戊戌",
+        "丁酉",
+        "丙申",
+        "乙未"
+      ],
+      "daeunAges": [
+        2,
+        12,
+        22,
+        32,
+        42,
+        52,
+        62,
+        72,
+        82,
+        92
+      ],
+      "raw": "양 1987/05/10 03:00 남자 서울 | 음 1987/04/13 서울 | ✦ 1987/05/10 03:28 지역시 (-32분) | 음·목 || 대운수 : 2(기묘)  좌우 슬라이드에서 더 볼 수 있어요.  2세 정관",
+      "url": "https://timelupin.com/fortune/saju/result?name=t&gender=M&year=1987&month=5&day=10&hour=3&minute=0&calendar=solar&isLeap=false&city=%EC%84%9C%EC%9A%B8&yaJasi=false"
+    },
+    {
+      "id": "c24",
+      "ok": true,
+      "pillars": {
+        "year": "경자",
+        "month": "무자",
+        "day": "갑신",
+        "hour": "갑자"
+      },
+      "pillarsHanja": {
+        "year": "庚子",
+        "month": "戊子",
+        "day": "甲申",
+        "hour": "甲子"
+      },
+      "daeunStartAge": 0,
+      "daeunStartAgeNote": "기묘",
+      "daeun": [
+        "정해",
+        "병술",
+        "을유",
+        "갑신",
+        "계미",
+        "임오",
+        "신사",
+        "경진",
+        "기묘",
+        "무인"
+      ],
+      "daeunHanja": [
+        "丁亥",
+        "丙戌",
+        "乙酉",
+        "甲申",
+        "癸未",
+        "壬午",
+        "辛巳",
+        "庚辰",
+        "己卯",
+        "戊寅"
+      ],
+      "daeunAges": [
+        0,
+        10,
+        20,
+        30,
+        40,
+        50,
+        60,
+        70,
+        80,
+        90
+      ],
+      "raw": "양 2020/12/07 01:00 여자 서울 | 음 2020/10/23 서울 | ✦ 2020/12/07 00:28 지역시 (-32분) | 양·목 || 대운수 : 0(기묘)  좌우 슬라이드에서 더 볼 수 있어요.  0세 상관",
+      "url": "https://timelupin.com/fortune/saju/result?name=t&gender=F&year=2020&month=12&day=7&hour=1&minute=0&calendar=solar&isLeap=false&city=%EC%84%9C%EC%9A%B8&yaJasi=false"
+    },
+    {
+      "id": "c25",
+      "ok": true,
+      "pillars": {
+        "year": "무진",
+        "month": "갑자",
+        "day": "병신",
+        "hour": "을미"
+      },
+      "pillarsHanja": {
+        "year": "戊辰",
+        "month": "甲子",
+        "day": "丙申",
+        "hour": "乙未"
+      },
+      "daeunStartAge": 0,
+      "daeunStartAgeNote": "기묘",
+      "daeun": [
+        "계해",
+        "임술",
+        "신유",
+        "경신",
+        "기미",
+        "무오",
+        "정사",
+        "병진",
+        "을묘",
+        "갑인"
+      ],
+      "daeunHanja": [
+        "癸亥",
+        "壬戌",
+        "辛酉",
+        "庚申",
+        "己未",
+        "戊午",
+        "丁巳",
+        "丙辰",
+        "乙卯",
+        "甲寅"
+      ],
+      "daeunAges": [
+        0,
+        10,
+        20,
+        30,
+        40,
+        50,
+        60,
+        70,
+        80,
+        90
+      ],
+      "raw": "양 1988/12/07 14:00 여자 서울 | 음 1988/10/29 서울 | ✦ 1988/12/07 13:28 지역시 (-32분) | 음·목 || 대운수 : 0(기묘)  좌우 슬라이드에서 더 볼 수 있어요.  0세 정관",
+      "url": "https://timelupin.com/fortune/saju/result?name=t&gender=F&year=1988&month=12&day=7&hour=14&minute=0&calendar=solar&isLeap=false&city=%EC%84%9C%EC%9A%B8&yaJasi=false"
+    }
+  ],
+  "notes": "대운수 옆 괄호 \"(기묘)\"는 모든 케이스에 동일하게 표시되어 사이트 표시 버그로 보임(daeunStartAgeNote에 그대로 기록). 대운수 0세로 표시되는 케이스 있음(사이트 표시 그대로)."
+}

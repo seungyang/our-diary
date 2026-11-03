@@ -1,0 +1,137 @@
+import { redirect } from "next/navigation";
+import { readSession } from "@/lib/session";
+import * as store from "@/lib/store";
+import { loadCharts } from "@/lib/saju/server";
+import { apiAvailable } from "@/lib/saju/llm";
+import { CATALOG } from "@/lib/saju/catalog";
+import { openSajuConversation } from "@/lib/actions";
+import { PageHead, SectionHead, TextLink } from "@/components/page";
+import { fmtDate, fmtTime } from "@/lib/saju/parse";
+import { AskForm, CatalogButton, ResetConversationButton, SajuProfileForm } from "@/components/saju-forms";
+import { DaeunStrip, ElementBars, PillarTable, SinsalList, Summary, TimingNote } from "@/components/saju-chart";
+import { Conversation, PendingBox } from "@/components/saju-thread";
+import { SajuSync } from "@/components/saju-sync";
+
+export const dynamic = "force-dynamic";
+
+export default async function SajuPage({ searchParams }: { searchParams: Promise<{ edit?: string }> }) {
+  const session = await readSession();
+  if (!session) redirect("/login");
+  const { edit } = await searchParams;
+  const loaded = await loadCharts(session.uid);
+
+  if (!loaded.profile || edit === "1") {
+    return (
+      <div className="space-y-[var(--space-xl)]">
+        <PageHead title="사주 풀이" sub="세 가지만 알려 주세요. 여덟 글자는 앱이 계산해요." />
+        <SajuProfileForm initial={loaded.profile} />
+        {loaded.profile ? (
+          <p className="text-[length:var(--text-sm)]">
+            <TextLink href="/diary/saju">그대로 두기</TextLink>
+          </p>
+        ) : null}
+      </div>
+    );
+  }
+
+  const chart = loaded.chart!;
+  const api = apiAvailable();
+  const partnerHas = Boolean(loaded.partnerChart);
+  let thread = await store.findSajuThread(session.uid, "main");
+  if (!thread) {
+    // 사주를 뽑았으면 기본 풀이가 첫 문답으로 바로 열린다.
+    await openSajuConversation();
+    thread = await store.findSajuThread(session.uid, "main");
+  }
+  const waiting = thread?.turns.at(-1)?.role === "me";
+  const answered = thread?.turns.some((t) => t.role === "reader") ?? false;
+
+  return (
+    <div className="space-y-[var(--space-xl)]">
+      <PageHead
+        title="사주 풀이"
+        sub={
+          <>
+            {loaded.profile.calendar === "lunar" && loaded.profile.lunarInput
+              ? `음력 ${fmtDate(loaded.profile.lunarInput.date)}${loaded.profile.lunarInput.leap ? "(윤달)" : ""} → 양력 ${fmtDate(loaded.profile.birthDate)}`
+              : fmtDate(loaded.profile.birthDate)}
+            {" · "}
+            {fmtTime(loaded.profile.birthTime)} · {loaded.profile.gender === "M" ? "남" : "여"} · <TextLink href="/diary/saju?edit=1">고치기</TextLink>
+          </>
+        }
+      />
+
+      <details className="group" open={!answered}>
+        <summary className="press cursor-pointer list-none [&::-webkit-details-marker]:hidden flex items-center min-h-11 gap-[var(--space-sm)]">
+          <span className="font-[family-name:var(--font-display)] text-[length:var(--text-base)] text-muted">내 여덟 글자</span>
+          <span className="text-[length:var(--text-xs)] text-neutral group-open:hidden">펼치기</span>
+          <span className="text-[length:var(--text-xs)] text-neutral hidden group-open:inline">접기</span>
+        </summary>
+        <div className="space-y-[var(--space-xl)] pt-[var(--space-sm)]">
+          <section className="space-y-[var(--space-sm)]">
+            <PillarTable chart={chart} />
+            <TimingNote chart={chart} />
+          </section>
+          <section>
+            <SectionHead>한눈에</SectionHead>
+            <Summary chart={chart} />
+          </section>
+          <section>
+            <SectionHead>오행</SectionHead>
+            <ElementBars chart={chart} />
+          </section>
+          <DaeunStrip chart={chart} />
+          <SinsalList chart={chart} />
+        </div>
+      </details>
+
+      <section className="space-y-[var(--space-md)]">
+        <SectionHead>온재와의 문답</SectionHead>
+        <p className="text-[length:var(--text-sm)] text-muted -mt-[var(--space-xs)]">
+          사주 보는 사람 &ldquo;온재&rdquo;와 주고받는 대화예요. {api ? "질문을 누르면 바로 답이 와요." : "질문을 복사해 Claude에 물어보고, 받은 답을 여기 붙여넣으면 이어져요."}
+        </p>
+        {thread ? (
+          <>
+            <SajuSync
+              uid={session.uid}
+              enabled={store.isMock}
+              turns={thread.turns.map((t) => ({ role: t.role, text: t.text, prompt: t.prompt, source: t.source }))}
+            />
+            <Conversation thread={thread} />
+            <PendingBox thread={thread} />
+            <AskForm api={api} partnerName={partnerHas ? loaded.partnerUid : null} disabled={Boolean(waiting)} />
+            <ResetConversationButton threadId={thread.id} uid={session.uid} />
+          </>
+        ) : (
+          <p className="text-[length:var(--text-base)] text-neutral">대화를 여는 중이에요. 화면을 새로 고쳐 주세요.</p>
+        )}
+      </section>
+
+      <section className="space-y-[var(--space-lg)]">
+        <SectionHead>물어볼 것</SectionHead>
+        <p className="text-[length:var(--text-sm)] text-muted -mt-[var(--space-xs)]">
+          누르면 위 대화에 질문으로 이어져요. {waiting ? "지금은 앞 질문의 답을 먼저 붙여넣어야 해요." : ""}
+        </p>
+        {CATALOG.map((g) => (
+          <div key={g.id}>
+            <h3 className="text-[length:var(--text-sm)] text-neutral mb-[var(--space-2xs)]">{g.name}</h3>
+            <div className="divide-y divide-rule-soft">
+              {g.items.map((it) => {
+                const blocked = Boolean(it.needsPartner && !partnerHas);
+                return (
+                  <CatalogButton
+                    key={it.id}
+                    itemId={it.id}
+                    text={it.text}
+                    disabled={Boolean(waiting) || blocked}
+                    note={blocked ? `${loaded.partnerUid ?? "상대"} 사주 필요` : undefined}
+                  />
+                );
+              })}
+            </div>
+          </div>
+        ))}
+      </section>
+    </div>
+  );
+}

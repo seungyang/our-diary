@@ -1,0 +1,206 @@
+/* Hallmark · genre: playful (soft register) · macrostructure: Letter
+ * theme: custom "두 개의 잉크" (Two Inks) · v7 — 무지개 파스텔 (color.jpg 추출)
+ * vibe: 커플 · 연애 · 첫만남 · 사랑 · 편함 · 담백한 노트 (사용자 브리프)
+ * paper oklch(98.2% 0.01 240) · pen-a oklch(50% 0.105 252) · pen-b oklch(52% 0.085 200)
+ * display: Gowun Batang 700 · body: Pretendard Variable
+ * axes: light paper-band / soft-serif display / cool accents (dusty blue + dusty teal)
+ * nav: N1a · footer: Ft6 · enrichment: none
+ *
+ * 컨셉: 한 권의 공책을 두 사람이 나눠 쓴다. 각자 펜 색이 다르다.
+ *       면은 파스텔로 뽀얗게, 글자는 진하게. 연한 건 종이지 글씨가 아니다.
+ *       잉크는 쨍한 코발트가 아니라 물을 한 번 탄 먹빛 파랑 — 채도를 낮추되 명도는 지켜 흰 글씨가 읽힌다.
+ *       여덟 무지개 색 중 각자 하나를 고르고, 그 색이 그 사람의 앱 테마가 된다.
+ */
+
+:root {
+  /* ── 종이와 잉크 ────────────────────────────────────────────── */
+  --color-paper: oklch(99.3% 0.002 146); /* color.jpg 바탕 */
+  --color-paper-2: oklch(95.8% 0.005 95); /* 카드 면 — 따뜻한 그레이지 */
+  --color-paper-3: oklch(91.3% 0.007 95);
+  --color-rule: oklch(85.5% 0.012 95);
+  --color-rule-soft: oklch(91.5% 0.009 95);
+  --color-neutral: oklch(46% 0.03 248); /* 보조 글자 — 흰 종이 위 6:1 이상 */
+  --color-muted: oklch(37% 0.032 248);
+  --color-ink: oklch(22% 0.03 248); /* 짙은 남색 잉크 */
+
+  /* ── 두 자루의 펜 ──────────────────────────────────────────── */
+  --color-pen-a: var(--pen-peri); /* 나 — 설정에서 고른 색으로 덮인다 */
+  --color-pen-a-soft: var(--pen-peri-soft);
+  --color-pen-a-on: var(--pen-peri-on);
+  --color-pen-a-wash: var(--pen-peri-wash);
+  /* 잉크 위에 얹는 글자 — 종이색(푸른기)이 아니라 맑은 흰색이어야 탁하지 않다 */
+  --color-on-accent: oklch(99.2% 0.003 240);
+  --color-pen-b: var(--pen-peach); /* 상대 */
+  --color-pen-b-soft: var(--pen-peach-soft);
+  --color-pen-b-on: var(--pen-peach-on);
+  --color-pen-b-wash: var(--pen-peach-wash);
+
+
+  /* ── 무지개 여덟 색 — color.jpg에서 추출 ─────────────────────
+     soft는 참고 팔레트 그대로, 나머지는 같은 색상각에서 밝기만 옮겼다.
+     ink(글자·점) / soft(파스텔 채움) / on(채움 위 글자) / wash(가장 연한 바탕) */
+  --pen-rose: oklch(50.0% 0.115 17);
+  --pen-rose-soft: oklch(79.1% 0.088 17);
+  --pen-rose-on: oklch(34.0% 0.095 17);
+  --pen-rose-wash: oklch(95.5% 0.037 17);
+
+  --pen-peach: oklch(50.0% 0.103 60);
+  --pen-peach-soft: oklch(86.2% 0.067 60);
+  --pen-peach-on: oklch(34.0% 0.090 60);
+  --pen-peach-wash: oklch(95.5% 0.028 60);
+
+  --pen-butter: oklch(50.0% 0.115 94);
+  --pen-butter-soft: oklch(90.6% 0.074 94);
+  --pen-butter-on: oklch(34.0% 0.095 94);
+  --pen-butter-wash: oklch(95.5% 0.031 94);
+
+  --pen-lime: oklch(50.0% 0.106 149);
+  --pen-lime-soft: oklch(84.5% 0.068 149);
+  --pen-lime-on: oklch(34.0% 0.092 149);
+  --pen-lime-wash: oklch(95.5% 0.029 149);
+
+  --pen-mint: oklch(50.0% 0.076 193);
+  --pen-mint-soft: oklch(86.1% 0.049 193);
+  --pen-mint-on: oklch(34.0% 0.066 193);
+  --pen-mint-wash: oklch(95.5% 0.020 193);
+
+  --pen-sky: oklch(50.0% 0.069 238);
+  --pen-sky-soft: oklch(85.1% 0.044 238);
+  --pen-sky-on: oklch(34.0% 0.060 238);
+  --pen-sky-wash: oklch(95.5% 0.019 238);
+
+  --pen-peri: oklch(50.0% 0.060 272);
+  --pen-peri-soft: oklch(84.4% 0.039 272);
+  --pen-peri-on: oklch(34.0% 0.052 272);
+  --pen-peri-wash: oklch(95.5% 0.016 272);
+
+  --pen-lilac: oklch(50.0% 0.088 331);
+  --pen-lilac-soft: oklch(81.3% 0.057 331);
+  --pen-lilac-on: oklch(34.0% 0.077 331);
+  --pen-lilac-wash: oklch(95.5% 0.024 331);
+
+  --color-focus: var(--pen-peri);
+  --color-danger: oklch(48% 0.14 22);
+
+  /* ── 타입 ──────────────────────────────────────────────────── */
+  --font-display: "Gowun Batang", "Apple SD Gothic Neo", ui-serif, Georgia, serif;
+  --font-body: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont,
+    "Apple SD Gothic Neo", "Segoe UI", system-ui, sans-serif;
+
+  /* 폰에서 읽는 앱. 본문 17px — iOS 기본과 같다. 15px 밑으로는 본문에 쓰지 않는다. */
+  --text-xs: 0.875rem; /* 14 — 배지·범례처럼 아주 짧은 말만 */
+  --text-sm: 0.9375rem; /* 15 — 보조 줄의 하한 */
+  --text-base: 1.0625rem; /* 17 */
+  --text-md: 1.1875rem; /* 19 */
+  --text-lg: 1.4375rem; /* 23 */
+  --text-xl: 1.875rem; /* 30 */
+  --text-2xl: 2.375rem;
+  --text-display-s: clamp(1.875rem, 5vw + 0.25rem, 2.5rem);
+  --text-display: clamp(2.125rem, 7vw + 0.25rem, 3.25rem); /* S24(360px)에서 34px */
+
+  --leading-tight: 1.15;
+  --leading-snug: 1.35;
+  --leading-body: 1.7; /* 한글 본문은 라틴보다 넉넉하게 */
+
+  --tracking-tight: -0.02em;
+  --tracking-normal: -0.005em;
+
+  /* ── 4pt 스케일 ────────────────────────────────────────────── */
+  --space-2xs: 0.25rem;
+  --space-xs: 0.5rem;
+  --space-sm: 0.75rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2.25rem;
+  --space-2xl: 3.5rem;
+  --space-3xl: 5.5rem;
+
+  /* ── 형태 — 모서리는 둥글게, 편하게 ─────────────────────────── */
+  --radius-input: 12px;
+  --radius-card: 16px;
+  --radius-pill: 999px;
+  --rule-hair: 1px;
+
+  --shadow-lift: 0 1px 2px oklch(21% 0.032 250 / 0.06),
+    0 10px 24px -14px oklch(21% 0.032 250 / 0.25);
+
+  /* ── 모션 ──────────────────────────────────────────────────── */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in: cubic-bezier(0.7, 0, 0.84, 0);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+
+  --dur-micro: 120ms;
+  --dur-short: 220ms;
+  --dur-long: 420ms;
+}
+
+/* 다크 모드 — 밤에 쓰는 앱. 앵커 휴는 그대로, 명도와 채도만 움직인다. */
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* 밤 종이 — 글자(ink 95%)와 대비가 나야 한다. ThemeScope의 다크 값과 같은 단계를 쓴다. */
+    --color-paper: oklch(16% 0.014 250);
+    --color-paper-2: oklch(20% 0.018 250); /* 카드 면 */
+    --color-paper-3: oklch(24% 0.022 250);
+    --color-rule: oklch(33% 0.024 250);
+    --color-rule-soft: oklch(26% 0.02 250);
+    --color-neutral: oklch(72% 0.022 250);
+    --color-muted: oklch(83% 0.016 250);
+    --color-ink: oklch(95% 0.012 250);
+
+    --color-pen-a: var(--pen-peri);
+    --color-pen-a-soft: var(--pen-peri-soft);
+    --color-pen-a-on: var(--pen-peri-on);
+    --color-pen-a-wash: var(--pen-peri-wash);
+    --color-on-accent: oklch(17% 0.02 250);
+    --color-pen-b: var(--pen-peach);
+    --color-pen-b-soft: var(--pen-peach-soft);
+    --color-pen-b-on: var(--pen-peach-on);
+    --color-pen-b-wash: var(--pen-peach-wash);
+
+
+    --pen-rose: oklch(80.0% 0.079 17);
+    --pen-rose-soft: oklch(33.0% 0.075 17);
+    --pen-rose-on: oklch(90.0% 0.053 17);
+    --pen-rose-wash: oklch(27.0% 0.048 17);
+
+    --pen-peach: oklch(80.0% 0.060 60);
+    --pen-peach-soft: oklch(33.0% 0.057 60);
+    --pen-peach-on: oklch(90.0% 0.040 60);
+    --pen-peach-wash: oklch(27.0% 0.037 60);
+
+    --pen-butter: oklch(80.0% 0.067 94);
+    --pen-butter-soft: oklch(33.0% 0.063 94);
+    --pen-butter-on: oklch(90.0% 0.045 94);
+    --pen-butter-wash: oklch(27.0% 0.041 94);
+
+    --pen-lime: oklch(80.0% 0.061 149);
+    --pen-lime-soft: oklch(33.0% 0.058 149);
+    --pen-lime-on: oklch(90.0% 0.041 149);
+    --pen-lime-wash: oklch(27.0% 0.037 149);
+
+    --pen-mint: oklch(80.0% 0.044 193);
+    --pen-mint-soft: oklch(33.0% 0.041 193);
+    --pen-mint-on: oklch(90.0% 0.029 193);
+    --pen-mint-wash: oklch(27.0% 0.027 193);
+
+    --pen-sky: oklch(80.0% 0.040 238);
+    --pen-sky-soft: oklch(33.0% 0.038 238);
+    --pen-sky-on: oklch(90.0% 0.027 238);
+    --pen-sky-wash: oklch(27.0% 0.024 238);
+
+    --pen-peri: oklch(80.0% 0.035 272);
+    --pen-peri-soft: oklch(33.0% 0.033 272);
+    --pen-peri-on: oklch(90.0% 0.023 272);
+    --pen-peri-wash: oklch(27.0% 0.021 272);
+
+    --pen-lilac: oklch(80.0% 0.051 331);
+    --pen-lilac-soft: oklch(33.0% 0.048 331);
+    --pen-lilac-on: oklch(90.0% 0.034 331);
+    --pen-lilac-wash: oklch(27.0% 0.031 331);
+
+    --color-focus: var(--pen-peri);
+    --color-danger: oklch(76% 0.1 22);
+
+    --shadow-lift: 0 1px 2px oklch(0% 0 0 / 0.4), 0 10px 24px -14px oklch(0% 0 0 / 0.6);
+  }
+}

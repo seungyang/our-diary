@@ -1,26 +1,379 @@
 @import "tailwindcss";
+@import "tw-animate-css";
+@import "../tokens.css";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* Tailwind v4 — 토큰을 유틸리티로 노출. 값은 tokens.css 한 곳에서만 정의한다. */
+@theme inline {
+  --color-paper: var(--color-paper);
+  --color-paper-2: var(--color-paper-2);
+  --color-paper-3: var(--color-paper-3);
+  --color-rule: var(--color-rule);
+  --color-rule-soft: var(--color-rule-soft);
+  --color-neutral: var(--color-neutral);
+  --color-muted: var(--color-muted);
+  --color-ink: var(--color-ink);
+  --color-pen-a: var(--color-pen-a);
+  --color-pen-a-soft: var(--color-pen-a-soft);
+  --color-pen-a-on: var(--color-pen-a-on);
+  --color-pen-a-wash: var(--color-pen-a-wash);
+  --color-pen-b: var(--color-pen-b);
+  --color-pen-b-soft: var(--color-pen-b-soft);
+  --color-pen-b-on: var(--color-pen-b-on);
+  --color-pen-b-wash: var(--color-pen-b-wash);
+  --color-focus: var(--color-focus);
+  --color-danger: var(--color-danger);
+
+  --font-display: var(--font-display);
+  --font-body: var(--font-body);
+
+  --radius-input: var(--radius-input);
+  --radius-card: var(--radius-card);
+  --radius-pill: var(--radius-pill);
+
+  /* shadcn/ui가 기대하는 이름 → 우리 토큰. 값은 여기서 새로 정하지 않는다. */
+  --color-background: var(--color-paper);
+  --color-foreground: var(--color-ink);
+  --color-card: var(--color-paper-2);
+  --color-card-foreground: var(--color-ink);
+  --color-popover: var(--color-paper);
+  --color-popover-foreground: var(--color-ink);
+  --color-primary: var(--color-pen-a-soft);
+  --color-primary-foreground: var(--color-pen-a-on);
+  --color-secondary: var(--color-paper-2);
+  --color-secondary-foreground: var(--color-ink);
+  --color-muted-foreground: var(--color-neutral);
+  --color-accent: var(--color-paper-2);
+  --color-accent-foreground: var(--color-ink);
+  --color-destructive: var(--color-danger);
+  --color-border: var(--color-rule);
+  --color-input: var(--color-rule);
+  --color-ring: var(--color-focus);
+  --radius-sm: 6px;
+  --radius-md: var(--radius-input);
+  --radius-lg: var(--radius-card);
+  --radius-xl: 18px;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+html {
+  overflow-x: clip;
+  color-scheme: light;
+  -webkit-text-size-adjust: 100%;
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  html {
+    color-scheme: dark;
   }
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  overflow-x: clip;
+  background: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  line-height: var(--leading-body);
+  letter-spacing: var(--tracking-normal);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* 밝은 글자가 어두운 면에서 더 굵어 보이는 걸 보정 */
+@media (prefers-color-scheme: dark) {
+  body {
+    font-weight: 350;
+  }
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-display);
+  font-weight: 700; /* 명조는 굵어야 폰에서 읽힌다 */
+  font-style: normal; /* 제목은 언제나 로만 */
+  line-height: var(--leading-tight);
+  letter-spacing: var(--tracking-tight);
+  text-wrap: balance;
+  overflow-wrap: anywhere;
+  min-width: 0;
+}
+
+p,
+li {
+  text-wrap: pretty;
+}
+
+/* 한글은 어절 단위로 끊는다 — 단어 중간에서 줄이 바뀌지 않게.
+   긴 URL·영문은 예외로 쪼갠다. */
+body {
+  word-break: keep-all;
+  overflow-wrap: break-word;
+}
+
+input,
+textarea,
+select,
+button {
+  font: inherit;
+  color: inherit;
+  letter-spacing: inherit;
+}
+
+textarea {
+  field-sizing: content;
+}
+
+/* 포커스 링은 즉시 나타난다 — 절대 애니메이션하지 않는다. */
+:focus-visible {
+  outline: 2px solid var(--color-focus);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+::selection {
+  background: var(--color-pen-a-wash);
+  color: var(--color-ink);
+}
+
+/* 숫자가 세로로 줄 맞게 */
+.tnum {
+  font-variant-numeric: tabular-nums;
+}
+
+/* ── 모션: 페이지당 한 번의 등장 시퀀스만 ────────────────────── */
+.reveal {
+  opacity: 0;
+  transform: translateY(8px);
+  animation: reveal var(--dur-long) var(--ease-out) forwards;
+  animation-delay: calc(var(--i, 0) * 60ms);
+}
+
+@keyframes reveal {
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* 눌리는 것은 눌린 티가 나야 한다 */
+.press {
+  transition: transform var(--dur-micro) var(--ease-out),
+    background-color var(--dur-micro) var(--ease-out),
+    border-color var(--dur-micro) var(--ease-out);
+}
+
+.press:active {
+  transform: scale(0.97);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    animation: fade-only 150ms linear forwards;
+  }
+  @keyframes fade-only {
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+  .press:active {
+    transform: none;
+  }
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+  }
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-rule) transparent;
+}
+
+/* ── 두 자루의 펜: 페이지당 단 하나의 오케스트레이션 ───────────── */
+.pen-stroke {
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+  animation: draw 900ms var(--ease-out) forwards;
+}
+
+.pen-stroke--b {
+  animation-delay: 260ms;
+}
+
+@keyframes draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pen-stroke {
+    animation: none;
+    stroke-dashoffset: 0;
+  }
+}
+
+/* ── 버킷을 이룬 순간, 딱 한 번 ─────────────────────────────── */
+.pop {
+  animation: pop var(--dur-short) var(--ease-out) both;
+}
+
+@keyframes pop {
+  from {
+    transform: scale(0.8);
+    opacity: 0.6;
+  }
+  to {
+    transform: none;
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pop {
+    animation: none;
+  }
+}
+
+/* ── 달력(react-day-picker)을 우리 토큰으로 ───────────────────── */
+.rdp-root {
+  --rdp-accent-color: var(--color-pen-a);
+  --rdp-accent-background-color: var(--color-pen-a-wash);
+  --rdp-day-height: 2.75rem;
+  --rdp-day-width: 2.75rem;
+  --rdp-day_button-height: 2.75rem;
+  --rdp-day_button-width: 2.75rem;
+  --rdp-day_button-border-radius: 999px;
+  --rdp-day_button-border: 2px solid transparent;
+  --rdp-selected-border: 2px solid var(--color-pen-a);
+  --rdp-today-color: var(--color-pen-a);
+  --rdp-nav_button-height: 2.75rem;
+  --rdp-nav_button-width: 2.75rem;
+  --rdp-outside-opacity: 0.35;
+  --rdp-disabled-opacity: 0.3;
+  --rdp-weekday-opacity: 1;
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  color: var(--color-ink);
+  margin: 0 auto;
+}
+
+.rdp-root .rdp-month_caption {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: var(--text-md);
+}
+
+.rdp-root .rdp-weekday {
+  font-size: var(--text-xs);
+  color: var(--color-neutral);
+  font-weight: 400;
+}
+
+.rdp-root .rdp-selected .rdp-day_button {
+  background: var(--color-pen-a-soft);
+  color: var(--color-pen-a-on);
+  border-color: var(--color-pen-a);
+  font-weight: 600;
+}
+
+.rdp-root .rdp-day_button:hover:not([disabled]) {
+  background: var(--color-paper-2);
+}
+
+.rdp-root .rdp-button_next,
+.rdp-root .rdp-button_previous {
+  border-radius: 999px;
+  color: var(--color-muted);
+}
+
+.rdp-root .rdp-button_next:hover,
+.rdp-root .rdp-button_previous:hover {
+  background: var(--color-paper-2);
+}
+
+/* 달력 탭: 날짜 아래 점 두 색 */
+.rdp-month-view {
+  width: 100%;
+}
+.rdp-month-view .rdp-month,
+.rdp-month-view .rdp-month_grid {
+  width: 100%;
+}
+/* 읽는 달력의 날짜 — 누를 수 없으니 손가락 커서도 hover도 없다. */
+.rdp-day_button--flat {
+  cursor: default;
+  background: transparent;
+}
+.rdp-day_button--flat:hover {
+  background: transparent;
+}
+
+.rdp-month-view .rdp-day_button--dots {
+  flex-direction: column;
+  gap: 2px;
+  line-height: 1;
+}
+
+/* 달력 상단 년·월 고르기 */
+.rdp-root .rdp-dropdowns {
+  gap: var(--space-2xs);
+}
+
+.rdp-root .rdp-dropdown_root {
+  border-radius: var(--radius-pill);
+}
+
+.rdp-root .rdp-dropdown_root:hover {
+  background: var(--color-paper-2);
+}
+
+.rdp-root .rdp-caption_label {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: var(--text-md);
+  color: var(--color-ink);
+  border: 0;
+  padding: 0 var(--space-2xs) 0 var(--space-xs);
+  gap: 2px;
+}
+
+.rdp-root .rdp-dropdown {
+  font-size: var(--text-base);
+  cursor: pointer;
+}
+
+/* 달력의 누르는 것은 전부 44px */
+.rdp-root .rdp-button_previous,
+.rdp-root .rdp-button_next {
+  width: 2.75rem;
+  height: 2.75rem;
+}
+
+.rdp-root .rdp-day,
+.rdp-root .rdp-day_button {
+  min-width: 2.75rem;
+  min-height: 2.75rem;
+}
+
+.rdp-month-view .rdp-day_button {
+  width: 100%;
+}
+
+/* 보이는 크기는 그대로 두고 누르는 영역만 44px로 넓힌다.
+   작은 동그라미·아이콘이 손가락에 안 잡히는 걸 막는다. */
+.hit-44 {
+  position: relative;
+}
+
+.hit-44::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 44px;
+  height: 44px;
+  transform: translate(-50%, -50%);
 }
